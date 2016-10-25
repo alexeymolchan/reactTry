@@ -3,3 +3,4 @@
 /.idea
 .DS_Store
 yarn.lock
+npm-debug.log
