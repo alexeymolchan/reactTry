@@ -1,14 +1,14 @@
-var React = require('react');
-var ReactDom = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var FirstComponent = React.createClass({
-    render: function(){
+class FirstComponent extends React.Component{
+    render(){
         return(
             <div>
                 <h1>It's the first Component, yahooo!!!!</h1>
             </div>
         )
     }
-});
+}
 
-ReactDom.render(<FirstComponent/>, document.getElementById('app'));
+ReactDOM.render(<FirstComponent/>, document.getElementById('app'));
