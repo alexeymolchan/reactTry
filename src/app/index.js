@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/Header';
 
-class FirstComponent extends React.Component{
+class App extends React.Component{
     render(){
         return(
             <div>
-                <h1>It's the first Component, yahooo!!!!</h1>
+                <Header/>
             </div>
         )
     }
 }
 
-ReactDOM.render(<FirstComponent/>, document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('app'));
