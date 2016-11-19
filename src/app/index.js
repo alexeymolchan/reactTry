@@ -33,11 +33,20 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch(action.type){
         case "ADD":
-            return Object.assign({}, state, {result: state.result + action.payload})
+            return {
+                ...state,
+                result: state.result + action.payload
+            }
         case "SUBTRACT":
-            return Object.assign({}, state, {result: state.result - action.payload})
+            return {
+                ...state,
+                result: state.result - action.payload
+            }
         case "ADD_SONG":
-            return Object.assign({}, state, {songs: [...state.songs, action.payload]})
+            return {
+                ...state,
+                songs: [...state.songs, action.payload]
+            }
         default:
             return state;
     }
@@ -51,9 +60,9 @@ store.subscribe(() => {
     console.log('dispatched', store.getState());
 });
 
-store.dispatch({type: "ADD", payload: 10});
+store.dispatch({type: "ADD", payload: 15});
 
-store.dispatch({type: "ADD", payload: 70});
+store.dispatch({type: "ADD", payload: 10});
 
 store.dispatch({type: "SUBTRACT", payload: 75});
 
