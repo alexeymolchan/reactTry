@@ -5,3 +5,9 @@
     border: 1px solid blanchedalmond;
     border-radius: 3px;
 }
+.wrapper {
+    width: 200px;
+}
+.ul {
+    list-style: none;
+}
