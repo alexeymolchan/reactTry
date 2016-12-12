@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import ActionAndroid from 'material-ui/svg-icons/Action/Android';
+import Field from './components/TextField';
 
 
 import './index.css'
@@ -103,6 +104,9 @@ class App extends React.Component {
                 onClick={(e) => this.handleClick(e, this.props.buttons.jobs.id)}
               />
             </Menu>
+            <Field label={'Full Name'} />
+            <Field label={'Work Email'} />
+            <Field label={'Password'} type="password" />
           </div>
         </MuiThemeProvider>
       </div>
